@@ -1,9 +1,8 @@
 class MongodbTestAT36 < Formula
   desc "Test version of Mongodb 3.6"
 
-  url "file:///dev/null"
+  url "https://raw.githubusercontent.com/sensorsasha/homebrew-mongodb-test36/master/empty", :using => :nounzip
   sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  revision 1
   version "1.0.0"
 
   # keg_only :versioned_formula
