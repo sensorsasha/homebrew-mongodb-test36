@@ -1,17 +1,18 @@
 class MongodbTestAT36 < Formula
-  desc "Test version of Mongodb 3.6"
+  desc "Test config of Mongodb 3.6 on 27018 port so you can run two DB in parallel."
 
   url "https://raw.githubusercontent.com/sensorsasha/homebrew-mongodb-test36/master/empty", :using => :nounzip
   sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  revision 1
   version "1.0.0"
-
-  # keg_only :versioned_formula
 
   depends_on "mongodb@3.6"
 
   def install
     (buildpath/"mongod-test36.conf").write mongodb_conf
     etc.install "mongod-test36.conf"
+
+    bin.install "empty" # Homebrew requires to download and "install" at least something
   end
 
   def post_install
@@ -76,7 +77,6 @@ class MongodbTestAT36 < Formula
   end
 
   test do
-    # system "#{bin}/mongod", "--sysinfo"
-    system "false"
+    system "#{bin}/mongod", "--sysinfo"
   end
 end
