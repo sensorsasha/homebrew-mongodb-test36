@@ -16,6 +16,7 @@ class MongodbTestAT36 < Formula
   end
 
   def post_install
+    (var/"log/mongodb-test36").mkpath
     (var/"mongodb-test36").mkpath
   end
 
@@ -47,7 +48,7 @@ class MongodbTestAT36 < Formula
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>#{opt_bin}/mongod</string>
+        <string>#{HOMEBREW_PREFIX}/opt/mongodb@3.6/bin/mongod</string>
         <string>--config</string>
         <string>#{etc}/mongod-test36.conf</string>
       </array>
