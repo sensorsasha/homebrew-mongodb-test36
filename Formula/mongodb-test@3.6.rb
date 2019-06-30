@@ -58,9 +58,9 @@ class MongodbTestAT36 < Formula
       <key>WorkingDirectory</key>
       <string>#{HOMEBREW_PREFIX}</string>
       <key>StandardErrorPath</key>
-      <string>#{var}/log/mongodb/output.log</string>
+      <string>#{var}/log/mongodb/output-test.log</string>
       <key>StandardOutPath</key>
-      <string>#{var}/log/mongodb/output.log</string>
+      <string>#{var}/log/mongodb/output-test.log</string>
       <key>HardResourceLimits</key>
       <dict>
         <key>NumberOfFiles</key>
