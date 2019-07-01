@@ -1,10 +1,9 @@
 class MongodbTestAT36 < Formula
-  desc "Test config of Mongodb 3.6 on 27018 port so you can run two DB in parallel."
-
+  desc "Test config for Mongodb 3.6 so you can run two DB in parallel"
+  homepage "https://github.com/sensorsasha/homebrew-mongodb-test36"
   url "https://raw.githubusercontent.com/sensorsasha/homebrew-mongodb-test36/master/empty", :using => :nounzip
+  version "3.6"
   sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  revision 1
-  version "1.0.0"
 
   depends_on "mongodb@3.6"
 
